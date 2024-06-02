@@ -1,13 +1,13 @@
 {
     "required": true,
     "minVersion": "0.8",
-    "package": "dog.kaylen.rebrand.mixins",
+    "package": "com.tcoded.clientbrandchanger.mixins",
     "compatibilityLevel": "JAVA_17",
     "mixins": [],
     "client": [
-        "ClientBrandRetrieverMixin",
-        "ClientConnectionMixin",
-        "LoginQueryResponseC2SPacketMixin"
+      "ClientBrandRetrieverMixin",
+      "ClientConnectionMixin",
+      "LoginQueryResponseC2SPacketMixin"
     ],
     "injectors": {
         "defaultRequire": 1

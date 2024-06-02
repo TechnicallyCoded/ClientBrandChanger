@@ -1,13 +1,13 @@
 /*
- * Copyright Kaylen Dart 2022
- * This project is licensed under the GNU GPLv3 license. See the LICENSE file for more information.
+ * Copyright TechnicallyCoded 2024
+ * See the LICENSE file for more information.
  */
-package dog.kaylen.rebrand.config;
+package com.tcoded.clientbrandchanger.config;
 
 /**
- * A data class containing the Rebrand mod configuration.
+ * A data class containing the ClientBrandChanger mod configuration.
  */
-public class RebrandModConfig {
+public class ClientBrandChangerModConfig {
 	/**
 	 * The name of the brand that is sent to the server. Defaults to vanilla.
 	 */

@@ -1,0 +1,8 @@
+{
+    "title.clientbrandchanger.config": "Configuration de ClientBrandChanger",
+    "category.clientbrandchanger.general": "Général",
+    "option.clientbrandchanger.enable": "Activer ClientBrandChanger",
+    "option.clientbrandchanger.brandName": "Nom de marque personnalisé",
+    "tooltip.clientbrandchanger.enable": "Active ou désactive le nom de marque personalisé pour masquer le nom de marque de votre client.",
+    "tooltip.clientbrandchanger.brandName": "Le nom de marque personnalisé à envoyer aux serveurs multijoueurs lors de la connexion."
+}

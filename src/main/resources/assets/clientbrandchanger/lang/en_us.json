@@ -1,0 +1,10 @@
+{
+    "title.clientbrandchanger.config": "ClientBrandChanger Configuration",
+    "category.clientbrandchanger.general": "General",
+    "option.clientbrandchanger.enable": "Enable ClientBrandChanger",
+    "option.clientbrandchanger.brandName": "Custom brand name",
+    "option.clientbrandchanger.ghostMode": "Enable Ghost Mode",
+    "tooltip.clientbrandchanger.enable": "Enables and disables ClientBrandChanger from hiding your client brand name.",
+    "tooltip.clientbrandchanger.brandName": "The custom brand name to send to multiplayer servers when connecting.",
+    "tooltip.clientbrandchanger.ghostMode": "Enables and disables Ghost Mode, which forces the client to act like a vanilla client during the login handshake. This will break multiplayer modded servers."
+}

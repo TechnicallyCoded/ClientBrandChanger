@@ -1,6 +1,6 @@
 plugins {
-    id "fabric-loom" version "1.2-SNAPSHOT"
-    id "com.diffplug.spotless" version "6.19.0"
+    id "fabric-loom" version "1.6-SNAPSHOT"
+    id "com.diffplug.spotless" version "6.25.0"
 }
 
 version = project.mod_version
@@ -71,9 +71,11 @@ jar {
 spotless {
     java {
         eclipse()
-        licenseHeader("/*\n" +
-                " * Copyright Kaylen Dart 2022\n" +
-                " * This project is licensed under the GNU GPLv3 license. See the LICENSE file for more information.\n" +
-                " */")
+        licenseHeader(
+                "/*\n" +
+                " * Copyright TechnicallyCoded 2024\n" +
+                " * See the LICENSE file for more information.\n" +
+                " */"
+        )
     }
 }

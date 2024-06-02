@@ -1,11 +1,11 @@
 /*
- * Copyright Kaylen Dart 2022
- * This project is licensed under the GNU GPLv3 license. See the LICENSE file for more information.
+ * Copyright TechnicallyCoded 2024
+ * See the LICENSE file for more information.
  */
-package dog.kaylen.rebrand.mixins;
+package com.tcoded.clientbrandchanger.mixins;
 
-import dog.kaylen.rebrand.RebrandClientMod;
-import dog.kaylen.rebrand.config.RebrandModConfig;
+import com.tcoded.clientbrandchanger.config.ClientBrandChangerModConfig;
+import com.tcoded.clientbrandchanger.ClientBrandChangerClient;
 import net.minecraft.network.ClientConnection;
 import net.minecraft.network.PacketCallbacks;
 import net.minecraft.network.packet.Packet;
@@ -17,17 +17,19 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Prevents the client from sending custom payload packets ( except vanilla ones that aren't (un)register ) when ghost mode is enabled.
+ * Prevents the client from sending custom payload packets ( except vanilla ones
+ * that aren't (un)register ) when ghost mode is enabled.
  */
 @Mixin(ClientConnection.class)
 public class ClientConnectionMixin {
 	@Inject(method = "send(Lnet/minecraft/network/packet/Packet;Lnet/minecraft/network/PacketCallbacks;Z)V", at = @At("HEAD"), cancellable = true)
-	public void rebrand$send(Packet<?> packet, @Nullable PacketCallbacks callbacks, boolean flush, CallbackInfo ci) {
+	public void clientbrandchanger$send(Packet<?> packet, @Nullable PacketCallbacks callbacks, boolean flush,
+			CallbackInfo ci) {
 		// default to ghost mode if the mod is not initialized - shouldn't occur!
-		if (RebrandClientMod.getInstance() == null) {
+		if (ClientBrandChangerClient.getInstance() == null) {
 			ci.cancel();
 		}
-		RebrandModConfig config = RebrandClientMod.getInstance().getConfig();
+		ClientBrandChangerModConfig config = ClientBrandChangerClient.getInstance().getConfig();
 		if (!config.enable || !config.ghostMode) {
 			return;
 		}

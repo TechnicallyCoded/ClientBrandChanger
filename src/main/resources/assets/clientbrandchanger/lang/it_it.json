@@ -1,0 +1,10 @@
+{
+    "title.clientbrandchanger.config": "Configurazione di ClientBrandChanger",
+    "category.clientbrandchanger.general": "Generale",
+    "option.clientbrandchanger.enable": "Abilita ClientBrandChanger",
+    "option.clientbrandchanger.brandName": "Personalizzare il nome del marchio",
+    "option.clientbrandchanger.ghostMode": "Abilita la modalità Fantasma",
+    "tooltip.clientbrandchanger.enable": "Abilita e disabilita ClientBrandChanger dal nascondere il marchio del tuo client.",
+    "tooltip.clientbrandchanger.brandName": "Il nome del marchio personalizzato da inviare ai server multigiocatore al momento della connessione.",
+    "tooltip.clientbrandchanger.ghostMode": "Abilita e disabilita la modalità Fantasma, che costringe il client a comportarsi come un client vanilla durante l'handshake di login. Questo rompe i server moddati multigiocatore."
+}

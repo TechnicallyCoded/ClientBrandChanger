@@ -25,7 +25,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
  - OS: [e.g. Windows]
- - Rebrand Version [e.g. 1.1.1]
+ - ClientBrandChanger Version [e.g. 1.1.1]
  - Java: [e.g. 19.0.1]
  - Minecraft: [g.g. 1.20.1]
 

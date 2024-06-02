@@ -1,11 +1,11 @@
 /*
- * Copyright Kaylen Dart 2022
- * This project is licensed under the GNU GPLv3 license. See the LICENSE file for more information.
+ * Copyright TechnicallyCoded 2024
+ * See the LICENSE file for more information.
  */
-package dog.kaylen.rebrand.mixins;
+package com.tcoded.clientbrandchanger.mixins;
 
-import dog.kaylen.rebrand.RebrandClientMod;
-import dog.kaylen.rebrand.config.RebrandModConfig;
+import com.tcoded.clientbrandchanger.ClientBrandChangerClient;
+import com.tcoded.clientbrandchanger.config.ClientBrandChangerModConfig;
 import net.minecraft.client.ClientBrandRetriever;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -18,13 +18,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ClientBrandRetriever.class)
 public class ClientBrandRetrieverMixin {
 	@Inject(at = @At("HEAD"), method = "getClientModName", cancellable = true, remap = false)
-	private static void rebrand$getConfiguredClientBrand(CallbackInfoReturnable<String> info) {
+	private static void clientbrandchanger$getConfiguredClientBrand(CallbackInfoReturnable<String> info) {
 		// prevent npe on client initialization
-		if (RebrandClientMod.getInstance() == null) {
+		if (ClientBrandChangerClient.getInstance() == null) {
 			info.setReturnValue("fabric");
 			return;
 		}
-		RebrandModConfig config = RebrandClientMod.getInstance().getConfig();
+		ClientBrandChangerModConfig config = ClientBrandChangerClient.getInstance().getConfig();
 		// if custom brand is not enabled, return before setting
 		if (!config.enable) {
 			return;

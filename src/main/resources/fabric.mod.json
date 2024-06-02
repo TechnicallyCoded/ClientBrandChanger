@@ -1,16 +1,14 @@
 {
     "schemaVersion": 1,
-    "id": "rebrand",
+    "id": "clientbrandchanger",
     "version": "${version}",
-    "name": "Rebrand",
+    "name": "ClientBrandChanger",
     "description": "Customize your client brand sent to multiplayer servers.",
     "authors": [{
-        "name": "Kaylen Dart",
-        "contact": {
-            "email": "actuallyori@gmail.com"
-        }
+        "name": "TechnicallyCoded"
     }],
     "contributors": [
+        "Kaylen Dart",
         "RazrCraft",
         "Calvineries",
         "iffyspeak-chroma",
@@ -18,23 +16,26 @@
         "Julienraptor01"
     ],
     "contact": {
-        "homepage": "https://www.curseforge.com/minecraft/mc-mods/rebrand",
-        "sources": "https://github.com/kaylendog/rebrand/",
-        "issues": "https://github.com/kaylendog/rebrand/issues"
+        "homepage": "https://github.com/TechnicallyCoded/ClientBrandChanger/",
+        "sources": "https://github.com/TechnicallyCoded/ClientBrandChanger/",
+        "issues": "https://github.com/TechnicallyCoded/ClientBrandChanger/issues"
     },
-    "icon": "assets/rebrand/icon.png",
-    "license": "GPL-3.0-or-later",
+    "icon": "assets/clientbrandchanger/icon.png",
     "environment": "client",
     "entrypoints": {
-        "client": ["dog.kaylen.rebrand.RebrandClientMod"],
-        "modmenu": ["dog.kaylen.rebrand.modmenu.RebrandModMenu"]
+        "client": [
+            "com.tcoded.clientbrandchanger.ClientBrandChangerClient"
+        ],
+        "modmenu": [
+            "com.tcoded.clientbrandchanger.modmenu.ClientBrandChangerModMenu"
+        ]
     },
     "mixins": [
-        "rebrand.mixins.json"
+        "clientbrandchanger.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=0.14",
-        "minecraft": "1.20.2",
+        "minecraft": "1.20.4",
         "java": ">=17"
     },
     "suggests": {
