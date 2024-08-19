@@ -21,14 +21,21 @@ public class ClientBrandRetrieverMixin {
 	private static void clientbrandchanger$getConfiguredClientBrand(CallbackInfoReturnable<String> info) {
 		// prevent npe on client initialization
 		if (ClientBrandChangerClient.getInstance() == null) {
-			info.setReturnValue("fabric");
 			return;
 		}
 		ClientBrandChangerModConfig config = ClientBrandChangerClient.getInstance().getConfig();
+
 		// if custom brand is not enabled, return before setting
 		if (!config.enable) {
 			return;
 		}
+
+		// If ghost mode is enabled, return vanilla brand
+		if (config.ghostMode) {
+			info.setReturnValue(ClientBrandRetriever.VANILLA);
+			return;
+		}
+
 		info.setReturnValue(config.brandName);
 	}
 }

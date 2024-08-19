@@ -25,10 +25,19 @@ public class LoginQueryResponseC2SPacketMixin {
 		if (ClientBrandChangerClient.getInstance() == null) {
 			info.setReturnValue(null);
 		}
+
 		ClientBrandChangerModConfig config = ClientBrandChangerClient.getInstance().getConfig();
-		if (!config.enable || !config.ghostMode) {
+
+		// Ignore packets if the mod is disabled
+		if (!config.enable) {
 			return;
 		}
+
+		// Ignore packets if ghost mode is disabled
+		if (!config.ghostMode) {
+			return;
+		}
+
 		info.setReturnValue(null);
 	}
 
